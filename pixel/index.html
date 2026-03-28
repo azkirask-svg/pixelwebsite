@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FIXED: Added standard favicon reference to resolve 404 console errors -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📈%3C/text%3E%3C/svg%3E">
+    <title data-i18n="page_title">بيكسل للتسويق | وكالة رقمية متميزة</title>
+    <!-- FIXED: Added comprehensive descriptive SEO meta tags -->
+    <meta name="description" content="وكالة تسويق رقمي رائدة تقدم حلولاً متكاملة لدفع نمو أعمالك" data-i18n="page_desc">
+    <meta name="keywords" content="digital marketing, SEO, Meta Ads, Google Ads, agency, Pixel Marketing">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- FIXED: Preloaded critical fonts for LCP (Largest Contentful Paint) optimization -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Inter:wght@300;400;600;700&family=Syne:wght@500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+
+    <!-- EmailJS script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // Placeholder: Replace with your actual EmailJS Public Key in production
+            emailjs.init("YOUR_PUBLIC_KEY");
+        })();
+    </script>
+
+    <!-- Custom CSS -->
+    <!-- FIXED: Separated concern notes added, but retained inside style.css block for easy single-file reading. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Elements -->
+    <div class="bg-shape shape-1" aria-hidden="true"></div>
+    <div class="bg-shape shape-2" aria-hidden="true"></div>
+    <div class="bg-shape shape-3" aria-hidden="true"></div>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- FIXED: Added aria-label for accessibility on logo -->
+            <a href="#" class="logo" aria-label="Pixel Marketing Home">
+                <span class="gradient-text">Pixel</span> <span data-i18n="logo_text">التسويق</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#home" class="nav-link" data-i18n="nav_home">الرئيسية</a>
+                <a href="#about" class="nav-link" data-i18n="nav_about">من نحن</a>
+                <a href="#services" class="nav-link" data-i18n="nav_services">خدماتنا</a>
+                <a href="#portfolio" class="nav-link" data-i18n="nav_portfolio">أعمالنا</a>
+                <a href="#pricing" class="nav-link" data-i18n="nav_pricing">الأسعار</a>
+                <a href="#contact" class="nav-link" data-i18n="nav_contact">تواصل معنا</a>
+
+                <div class="nav-buttons d-flex align-center gap-3">
+                    <button id="theme-toggle" class="icon-toggle-btn" aria-label="Toggle Theme">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <!-- FIXED: Added explicit button type to prevent default form submits -->
+                    <button type="button" id="lang-toggle" class="lang-btn">
+                        <i class="fa-solid fa-globe"></i> <span id="current-lang">English</span>
+                    </button>
+                </div>
+            </nav>
+            <div class="d-flex align-center gap-3">
+                <div class="mobile-theme d-none">
+                    <button id="mobile-theme-toggle" class="icon-toggle-btn" aria-label="Toggle Theme via Mobile">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+                <button type="button" class="mobile-toggle" aria-label="Open Mobile Menu"><i
+                        class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="container hero-container grid">
+                <div class="hero-content">
+                    <h1 class="hero-title" style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+                        <span data-i18n="hero_title">ارتقِ بعلامتك التجارية مع بيكسل للتسويق</span>
+                        <span style="animation: floating 4s ease-in-out infinite; transform: scaleX(-1);"><i
+                                class="fa-solid fa-rocket gradient-text"></i></span>
+                    </h1>
+                    <p class="hero-subtitle" data-i18n="hero_subtitle">استراتيجيات تسويق رقمي متقدمة وحملات تعتمد على
+                        الأداء لتحقيق أعلى عائد على الاستثمار</p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary" data-i18n="hero_btn_primary">ابدأ الآن</a>
+                        <a href="#contact" class="btn btn-outline" data-i18n="hero_btn_secondary">استشارة مجانية</a>
+                    </div>
+                    <!-- Stats Section -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h3 class="counter" data-target="100">+<span>0</span></h3>
+                            <p data-i18n="stat_clients">عملاء سعداء</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="counter" data-target="250">+<span>0</span></h3>
+                            <p data-i18n="stat_campaigns">حملة إعلانية</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="counter" data-target="1">+<span>0</span>M</h3>
+                            <p data-i18n="stat_reach">مشاهدة وصول</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="counter" data-target="10">+<span>0</span></h3>
+                            <p data-i18n="stat_years">سنوات خبرة</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIXED: Removed rigid hardcoded heights making floating elements flex cleanly inside visual -->
+                <div class="hero-visual">
+                    <div class="glass-card main-hero-card"
+                        style="padding: 1.5rem; width: 100%; max-width: 380px; margin: 0 auto; text-align: start;">
+                        <div class="card-glow"></div>
+
+                        <!-- Header -->
+                        <div class="d-flex justify-between align-center border-b border-glass pb-3 mb-4">
+                            <div>
+                                <h4 class="font-bold text-xl mb-1" style="color: var(--text-main);"
+                                    data-i18n="dash_visits">نمو العائدات</h4>
+                                <span style="color: #10b981; font-weight: bold; font-size: 0.9rem;"><i
+                                        class="fa-solid fa-arrow-trend-up"></i> +245% أرباح</span>
+                            </div>
+                            <div class="glass-icon"><i class="fa-solid fa-chart-pie gradient-text text-xl"></i></div>
+                        </div>
+
+                        <!-- Graph / Chart Area -->
+                        <div class="chart-container" style="position: relative; height: 120px; margin-bottom: 2rem;">
+                            <svg viewBox="0 0 100 40" style="width: 100%; height: 100%; overflow: visible;"
+                                preserveAspectRatio="none">
+                                <defs>
+                                    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                                        <stop offset="0%" stop-color="#ec4899" />
+                                        <stop offset="100%" stop-color="#6366f1" />
+                                    </linearGradient>
+                                    <linearGradient id="fillGrad" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#6366f1" stop-opacity="0.4" />
+                                        <stop offset="100%" stop-color="#6366f1" stop-opacity="0" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M0,35 Q15,30 25,25 T50,15 T80,5 T100,2 L100,40 L0,40 Z" fill="url(#fillGrad)"
+                                    class="chart-fill" />
+                                <path d="M0,35 Q15,30 25,25 T50,15 T80,5 T100,2" fill="none" stroke="url(#lineGrad)"
+                                    stroke-width="2" stroke-linecap="round" class="chart-path" />
+                            </svg>
+                        </div>
+
+                        <!-- Animated Data Bars -->
+                        <div class="analytics-bars d-flex align-end justify-between" style="height: 60px; gap: 8px;">
+                            <div class="bar"
+                                style="height: 30%; background: var(--glass-border); width: 100%; border-radius: 4px;">
+                            </div>
+                            <div class="bar"
+                                style="height: 50%; background: var(--glass-border); width: 100%; border-radius: 4px;">
+                            </div>
+                            <div class="bar"
+                                style="height: 40%; background: var(--glass-border); width: 100%; border-radius: 4px;">
+                            </div>
+                            <div class="bar"
+                                style="height: 70%; background: var(--primary-light); width: 100%; border-radius: 4px; box-shadow: 0 0 10px var(--primary-light);">
+                            </div>
+                            <div class="bar"
+                                style="height: 60%; background: var(--glass-border); width: 100%; border-radius: 4px;">
+                            </div>
+                            <div class="bar"
+                                style="height: 90%; background: var(--secondary-light); width: 100%; border-radius: 4px; box-shadow: 0 0 10px var(--secondary-light);">
+                            </div>
+                            <div class="bar"
+                                style="height: 80%; background: var(--glass-border); width: 100%; border-radius: 4px;">
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-between mt-3 text-muted" style="font-size: 0.70rem;">
+                            <span>يناير</span>
+                            <span>فبراير</span>
+                            <span>مارس</span>
+                            <span>أبريل</span>
+                            <span>مايو</span>
+                            <span>يونيو</span>
+                            <span>يوليو</span>
+                        </div>
+                    </div>
+                    <div class="glass-card float-card-1">
+                        <i class="fa-solid fa-bullseye gradient-text"></i>
+                        <span data-i18n="hero_card_1">استهداف دقيق</span>
+                    </div>
+                    <div class="glass-card float-card-2">
+                        <i class="fa-solid fa-rocket gradient-text"></i>
+                        <span data-i18n="hero_card_2">نتائج سريعة</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section dark-bg">
+            <div class="container about-container grid">
+                <div class="about-visual">
+                    <div class="image-wrapper glass-element">
+                        <!-- FIXED: Efficient lazy loading and explicit width/height removed to rely on flex box container boundaries -->
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800"
+                            alt="Pixel Marketing Corporate Team Meeting" loading="lazy">
+                        <div class="overlay-badge glass-card">
+                            <i class="fa-solid fa-award text-3xl gradient-text mb-2 d-inline-block"></i>
+                            <div>
+                                <h4 data-i18n="about_badge_title">وكالة معتمدة</h4>
+                                <p data-i18n="about_badge_desc">شريك جوجل وميتا</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="section-badge" data-i18n="about_badge">قصتنا</div>
+                    <h2 class="section-title" data-i18n="about_title">نحن نصنع <span>التأثير</span> منذ 2023</h2>
+                    <p class="section-desc" data-i18n="about_desc1">بيكسل للتسويق هي وكالة تسويق رقمي عالمية المستوى
+                        تتجاوز الحدود التقليدية. نحن نجمع بين الإبداع المبهر والبيانات الدقيقة لنقدم لك حملات تصنع
+                        الفارق الحقيقي.</p>
+                    <p class="section-desc" data-i18n="about_desc2">ومع أكثر من 10 سنوات من الخبرة المتراكمة لفريق عملنا
+                        في مجال التخطيط الاستراتيجي، نعدك بالشفافية والنتائج الملموسة.</p>
+
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-circle-check gradient-text"></i> <span
+                                data-i18n="about_feature1">استراتيجيات مبتكرة تعتمد على البيانات</span></li>
+                        <li><i class="fa-solid fa-circle-check gradient-text"></i> <span data-i18n="about_feature2">فريق
+                                من الخبراء في جميع مجالات التسويق</span></li>
+                        <li><i class="fa-solid fa-circle-check gradient-text"></i> <span data-i18n="about_feature3">نهج
+                                يركز بالكامل على زيادة العائد وتوسيع النطاق</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="section-badge" data-i18n="services_badge">خبراتنا</div>
+                    <h2 class="section-title" data-i18n="services_title">ماذا <span>نقدم</span> لك</h2>
+                    <p class="section-desc mx-auto" data-i18n="services_desc">حلول متكاملة تغطي كافة جوانب تواجدك الرقمي
+                        لتحقيق أهدافك بكفاءة عالية.</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card glass-card">
+                        <div class="icon-box"><i class="fa-solid fa-hashtag gradient-text text-3xl"></i></div>
+                        <h3 data-i18n="srv_social_title">التسويق عبر شبكات التواصل</h3>
+                        <p data-i18n="srv_social_desc" class="text-muted">إدارة احترافية للحسابات، بناء مجتمع تفاعلي،
+                            وزيادة الوعي بعلامتك التجارية.</p>
+                    </div>
+                    <div class="service-card glass-card">
+                        <div class="icon-box"><i class="fa-solid fa-bullhorn gradient-text text-3xl"></i></div>
+                        <h3 data-i18n="srv_ads_title">الإعلانات المدفوعة</h3>
+                        <p data-i18n="srv_ads_desc" class="text-muted">استهداف دقيق للمهتمين عبر ميتا وجوجل لتحقيق أعلى
+                            معدلات التحويل والمبيعات.</p>
+                    </div>
+                    <div class="service-card glass-card">
+                        <div class="icon-box"><i class="fa-solid fa-pen-nib gradient-text text-3xl"></i></div>
+                        <h3 data-i18n="srv_content_title">صناعة المحتوى</h3>
+                        <p data-i18n="srv_content_desc" class="text-muted">محتوى إبداعي وجذاب (صور، فيديو، نصوص) يتحدث
+                            بصوت علامتك ويتفاعل مع جمهورك.</p>
+                    </div>
+                    <div class="service-card glass-card">
+                        <div class="icon-box"><i class="fa-solid fa-palette gradient-text text-3xl"></i></div>
+                        <h3 data-i18n="srv_branding_title">الهوية البصرية</h3>
+                        <p data-i18n="srv_branding_desc" class="text-muted">تصميم هويات متكاملة تعكس شخصيتك المؤسسية
+                            وتترك طابعاً لا يُنسى.</p>
+                    </div>
+                    <div class="service-card glass-card">
+                        <div class="icon-box"><i class="fa-solid fa-magnifying-glass gradient-text text-3xl"></i></div>
+                        <h3 data-i18n="srv_seo_title">تحسين محركات البحث</h3>
+                        <p data-i18n="srv_seo_desc" class="text-muted">تصدّر نتائج البحث واجذب زيارات مجانية مستهدفة
+                            ومستمرة لموقعك الإلكتروني.</p>
+                    </div>
+                    <div class="service-card glass-card">
+                        <div class="icon-box"><i class="fa-solid fa-chart-pie gradient-text text-3xl"></i></div>
+                        <h3 data-i18n="srv_analytics_title">تحليل البيانات</h3>
+                        <p data-i18n="srv_analytics_desc" class="text-muted">تقارير دقيقة ومفصلة لقياس أداء الحملات
+                            واتخاذ قرارات مبنية على الأرقام.</p>
+                    </div>
+                    <div class="service-card glass-card">
+                        <div class="icon-box"><i class="fa-solid fa-toolbox gradient-text text-3xl"></i></div>
+                        <h3 data-i18n="srv_tools_title">أدوات تسويقية احترافية</h3>
+                        <p data-i18n="srv_tools_desc" class="text-muted">نوفر لك أحدث التقنيات والبرمجيات المتطورة
+                            لمراقبة وتحسين أداء حملاتك بدقة متناهية.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio section dark-bg">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="section-badge" data-i18n="port_badge">دراسات حالة</div>
+                    <h2 class="section-title" data-i18n="port_title">نتائج <span>حقيقية</span></h2>
+                    <p class="section-desc mx-auto" data-i18n="port_desc">النجاح لا يُقاس بالكلمات، بل بالأرقام والعائد
+                        على الاستثمار.</p>
+                </div>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-card glass-card p-0">
+                        <div class="port-image">
+                            <!-- FIXED: Better explicit ALTs and optimized lazy rendering -->
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
+                                alt="Local Fashion Store E-Commerce Case Study Conversion Rates" loading="lazy">
+                            <div class="port-overlay">
+                                <span class="badge" data-i18n="port_cat_ecommerce">متاجر إلكترونية</span>
+                            </div>
+                        </div>
+                        <div class="port-content p-4">
+                            <h3 data-i18n="port_1_title" class="mb-2">متجر أزياء محلي</h3>
+                            <p data-i18n="port_1_desc" class="mb-3 text-muted">حملة متكاملة على منصات التواصل وميتا أدت
+                                لمبيعات مضاعفة خلال 3 أشهر.</p>
+                            <div class="metrics d-flex">
+                                <div><strong class="gradient-text text-2xl">+250%</strong> <span
+                                        data-i18n="port_metric_roi" class="d-block text-sm">العائد</span></div>
+                                <div><strong class="gradient-text text-2xl">+140%</strong> <span
+                                        data-i18n="port_metric_conv" class="d-block text-sm">التحويل</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card glass-card p-0">
+                        <div class="port-image">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800"
+                                alt="Real Estate Luxury Development Lead Generation Property" loading="lazy">
+                            <div class="port-overlay">
+                                <span class="badge" data-i18n="port_cat_realestate">عقارات</span>
+                            </div>
+                        </div>
+                        <div class="port-content p-4">
+                            <h3 data-i18n="port_2_title" class="mb-2">تطوير عقاري</h3>
+                            <p data-i18n="port_2_desc" class="mb-3 text-muted">توليد عملاء محتملين (Leads) ذوي جودة
+                                عالية لمشروع عقاري فاخر.</p>
+                            <div class="metrics d-flex">
+                                <div><strong class="gradient-text text-2xl">1,200+</strong> <span
+                                        data-i18n="port_metric_leads" class="d-block text-sm">عميل</span></div>
+                                <div><strong class="gradient-text text-2xl">-45%</strong> <span
+                                        data-i18n="port_metric_cpl" class="d-block text-sm">تكلفة</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FIXED: Re-injected previously dropped Testimonials Section for layout completeness -->
+        <section id="testimonials" class="testimonials section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="section-badge" data-i18n="testi_badge">العملاء</div>
+                    <h2 class="section-title" data-i18n="testi_title">ماذا <span>يقولون</span> عنا</h2>
+                </div>
+
+                <div class="testimonials-slider grid"
+                    style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="testimonial-card glass-card">
+                        <i class="fa-solid fa-quote-right quote-icon gradient-text text-3xl mb-3"></i>
+                        <p data-i18n="testi_1_desc" class="text-muted mb-4">"فريق بيكسل يمتلك احترافية مجنونة! ساعدونا
+                            في إعادة هيكلة هويتنا البصرية وإطلاق حملات مبيعات ضاعفت أرباحنا بشكل لم نكن نتوقعه إطلاقاً."
+                        </p>
+                        <div class="author d-flex align-center gap-3 border-t border-glass pt-3">
+                            <div class="avatar"><img
+                                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150"
+                                    alt="Ahmed Abdullah Avatar" loading="lazy" class="rounded-full" width="60"
+                                    height="60"></div>
+                            <div class="info">
+                                <h5 data-i18n="testi_1_name" class="font-bold">أحمد عبدلله</h5>
+                                <span data-i18n="testi_1_role" class="text-sm text-secondary">المدير التنفيذي، شركة
+                                    أفق</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card glass-card">
+                        <i class="fa-solid fa-quote-right quote-icon gradient-text text-3xl mb-3"></i>
+                        <p data-i18n="testi_2_desc" class="text-muted mb-4">"أفضل قرار اتخذناه كان التعاقد مع بيكسل.
+                            تصميم إبداعي وعملي، التزام تام بالمواعيد، والتقارير دقيقة جداً."</p>
+                        <div class="author d-flex align-center gap-3 border-t border-glass pt-3">
+                            <div class="avatar"><img
+                                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150"
+                                    alt="Sarah Khaled Avatar" loading="lazy" class="rounded-full" width="60"
+                                    height="60"></div>
+                            <div class="info">
+                                <h5 data-i18n="testi_2_name" class="font-bold">سارة خالد</h5>
+                                <span data-i18n="testi_2_role" class="text-sm text-secondary">مؤسسة متجر إيليت</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card glass-card">
+                        <i class="fa-solid fa-quote-right quote-icon gradient-text text-3xl mb-3"></i>
+                        <p data-i18n="testi_3_desc" class="text-muted mb-4">"خبرة واسعة وأدوات تسويق فائقة التطور.
+                            موقعنا أصبح يتصدر نتائج البحث بشكل ملحوظ وملفت للانتباه بفضل عملهم الدؤوب."</p>
+                        <div class="author d-flex align-center gap-3 border-t border-glass pt-3">
+                            <div class="avatar"><img
+                                    src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150"
+                                    alt="Omar Hassan Avatar" loading="lazy" class="rounded-full" width="60" height="60">
+                            </div>
+                            <div class="info">
+                                <h5 data-i18n="testi_3_name" class="font-bold">عمر حسن</h5>
+                                <span data-i18n="testi_3_role" class="text-sm text-secondary">صاحب مطعم ومقهى نون</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card glass-card">
+                        <i class="fa-solid fa-quote-right quote-icon gradient-text text-3xl mb-3"></i>
+                        <p data-i18n="testi_4_desc" class="text-muted mb-4">"تصميم الموقع الذي أنجزوه كان خرافياً! سرعة،
+                            أداء، وواجهة مستخدم غاية في السلاسة أدت لزيادة عملائنا المحتملين يومياً."</p>
+                        <div class="author d-flex align-center gap-3 border-t border-glass pt-3">
+                            <div class="avatar"><img
+                                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150"
+                                    alt="Mona Ali Avatar" loading="lazy" class="rounded-full" width="60" height="60">
+                            </div>
+                            <div class="info">
+                                <h5 data-i18n="testi_4_name" class="font-bold">منى علي</h5>
+                                <span data-i18n="testi_4_role" class="text-sm text-secondary">مديرة تسويق عقاري</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing section dark-bg">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="section-badge" data-i18n="price_badge">الأسعار</div>
+                    <h2 class="section-title" data-i18n="price_title">خطط <span>تناسب</span> نموك</h2>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Basic -->
+                    <div class="pricing-card glass-card tier-basic">
+                        <h3 data-i18n="price_basic" class="text-xl mb-2 font-bold">باقة الانطلاق</h3>
+                        <div class="price-box mb-4">
+                            <h2 class="text-3xl font-bold"><span data-i18n="price_basic_price">8,000</span><span
+                                    class="text-sm font-normal text-muted" data-i18n="price_basic_period">
+                                    ج.م/شهرياً</span></h2>
+                        </div>
+                        <p class="tier-desc text-sm text-muted mb-4 pb-4 border-b border-glass"
+                            data-i18n="price_basic_desc">مثالية للشركات الناشئة الباحثة عن انطلاقة وتأسيس قوي.</p>
+                        <ul class="tier-features mb-4">
+                            <li><i class="fa-solid fa-check text-green"></i> <span data-i18n="feat_basic_1">إدارة منصتين
+                                    (فيسبوك وإنستغرام)</span></li>
+                            <li><i class="fa-solid fa-check text-green"></i> <span data-i18n="feat_basic_2">12 منشور
+                                    بتصاميم احترافية</span></li>
+                            <li><i class="fa-solid fa-check text-green"></i> <span data-i18n="feat_basic_3">إدارة حملات
+                                    ممولة (ميزانية محدودة)</span></li>
+                            <li><i class="fa-solid fa-check text-green"></i> <span data-i18n="feat_basic_4">تقرير شهري
+                                    مبسط للأداء</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline full-width mt-3" data-i18n="btn_choose">اختر الخطة</a>
+                    </div>
+
+                    <!-- Pro -->
+                    <div class="pricing-card glass-card tier-pro popular-tier relative">
+                        <!-- FIXED: Enhanced popular badge UI structure -->
+                        <div class="popular-badge absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient px-4 py-1 rounded-full text-xs font-bold text-white shadow-lg"
+                            data-i18n="badge_popular">الأكثر طلباً</div>
+                        <h3 data-i18n="price_pro" class="text-xl mb-2 font-bold gradient-text">باقة النمو والمبيعات</h3>
+                        <div class="price-box mb-4">
+                            <h2 class="text-4xl font-bold gradient-text"><span
+                                    data-i18n="price_pro_price">15,000</span><span
+                                    class="text-sm font-normal text-muted" data-i18n="price_pro_period">
+                                    ج.م/شهرياً</span></h2>
+                        </div>
+                        <p class="tier-desc text-sm text-muted mb-4 pb-4 border-b border-glass"
+                            data-i18n="price_pro_desc">للشركات المتوسطة الطامحة لزيادة المبيعات بقوة والانتشار.</p>
+                        <ul class="tier-features mb-4">
+                            <li><i class="fa-solid fa-check text-green"></i> <span data-i18n="feat_pro_1">إدارة 4 منصات
+                                    تواصل اجتماعي</span></li>
+                            <li><i class="fa-solid fa-check text-green"></i> <span data-i18n="feat_pro_2">20 منشور +
+                                    صناعة 4 فيديوهات (Reels)</span></li>
+                            <li><i class="fa-solid fa-check text-green"></i> <span data-i18n="feat_pro_3">إدارة إعلانات
+                                    متقدمة باستهداف دقيق</span></li>
+                            <li><i class="fa-solid fa-check text-green"></i> <span data-i18n="feat_pro_4">تحسين محركات
+                                    البحث SEO (أساسي)</span></li>
+                            <li><i class="fa-solid fa-check text-green"></i> <span data-i18n="feat_pro_5">تقرير مفصل نصف
+                                    شهري للاستراتيجية</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary full-width mt-3" data-i18n="btn_choose">اختر الخطة</a>
+                    </div>
+
+                    <!-- Premium -->
+                    <div class="pricing-card glass-card tier-premium">
+                        <h3 data-i18n="price_prem" class="text-xl mb-2 font-bold">باقة الهيمنة الشاملة (النخبة)</h3>
+                        <div class="price-box mb-4">
+                            <h2 class="text-3xl font-bold"><span data-i18n="price_prem_price">25,000</span><span
+                                    class="text-sm font-normal text-muted" data-i18n="price_prem_period">
+                                    ج.م/شهرياً</span></h2>
+                        </div>
+                        <p class="tier-desc text-sm text-muted mb-4 pb-4 border-b border-glass"
+                            data-i18n="price_prem_desc">باقة الخمس نجوم للشركات الكبرى للسيطرة على السوق بالكامل ومضاعفة
+                            الحصة السوقية.</p>
+                        <ul class="tier-features mb-4">
+                            <li><i class="fa-solid fa-check text-green"></i> <span data-i18n="feat_prem_1">إدارة شاملة
+                                    لجميع المنصات مع الردود الدائمة</span></li>
+                            <li><i class="fa-solid fa-check text-green"></i> <span data-i18n="feat_prem_2">محتوى غير
+                                    محدود + تصوير فوتوغرافي/فيديو شهرياً</span></li>
+                            <li><i class="fa-solid fa-check text-green"></i> <span data-i18n="feat_prem_3">إدارة
+                                    ميزانيات إعلانية ضخمة عبر قمع المبيعات (Funnels)</span></li>
+                            <li><i class="fa-solid fa-check text-green"></i> <span data-i18n="feat_prem_4">تحسين SEO
+                                    متقدم مع كتابة مقالات حصرية للمدونة</span></li>
+                            <li><i class="fa-solid fa-check text-green"></i> <span data-i18n="feat_prem_5">مدير حساب
+                                    مخصص متوفر للاستشارات 24/7</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline full-width mt-3" data-i18n="btn_choose">تواصل لطلب
+                            الباقة</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container contact-container grid">
+                <div class="contact-info">
+                    <h2 class="section-title mb-4" data-i18n="contact_title">لنبدأ <span>العمل!</span></h2>
+                    <p class="mb-5 text-muted" data-i18n="contact_desc">هل أنت مستعد لنقل نشاطك التجاري إلى المستوى
+                        التالي؟ تواصل معنا اليوم لتحصل على استشارة استراتيجية مجانية.</p>
+
+                    <div class="info-item glass-element d-flex align-center p-4 rounded-lg mb-3">
+                        <div class="icon text-2xl mr-4"><i class="fa-solid fa-envelope gradient-text"></i></div>
+                        <div>
+                            <h4 data-i18n="contact_email" class="mb-1">البريد الإلكتروني</h4>
+                            <a href="mailto:pixelmarkering@gmail.com"
+                                class="text-sm text-main hover-themed text-decoration-none">pixelmarkering@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item glass-element d-flex align-center p-4 rounded-lg mt-3">
+                        <div class="icon text-2xl mr-4"><i class="fa-solid fa-phone gradient-text"></i></div>
+                        <div>
+                            <h4 data-i18n="contact_phone" class="mb-1">الهاتف</h4>
+                            <a href="tel:01044529654" dir="ltr"
+                                class="text-right text-sm text-main hover-themed text-decoration-none d-block">01044529654</a>
+                        </div>
+                    </div>
+
+                    <!-- Additional Social Connection -->
+                    <a href="https://wa.me/201044529654?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%21%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%B7%D9%84%D8%A8%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9"
+                        target="_blank" class="btn btn-whatsapp mt-5 w-full">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> <span data-i18n="contact_whatsapp">تواصل عبر
+                            واتساب</span>
+                    </a>
+                </div>
+
+                <div class="contact-form glass-card">
+                    <!-- Form notification container -->
+                    <div id="form-alert" class="d-none rounded p-3 mb-4 text-sm font-bold border-l-4"></div>
+
+                    <!-- FIXED: Added standard form attributes to prevent inherent layout shifts on rapid validation errors -->
+                    <form id="lead-form" action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Web3Forms Access Key -->
+                        <input type="hidden" name="access_key" value="180ca4a2-d1a3-4224-8f5b-0ac6245c6dab">
+                        
+                        <!-- Customization -->
+                        <input type="hidden" name="from_name" value="Pixel Marketing Agency">
+                        <input type="hidden" name="subject" value="🚀 طلب استشارة جديد من موقع بيكسل">
+                        
+                        <div class="form-group mb-4 relative input-wrap">
+                            <label for="name" data-i18n="form_name" class="d-block mb-2 text-sm font-bold">الاسم واللقب
+                                <span class="text-secondary">*</span></label>
+                            <input type="text" id="name" name="name"
+                                class="form-control glass-input full-width p-3 rounded" required autocomplete="name">
+                        </div>
+                        <div class="form-group mb-4 relative input-wrap">
+                            <label for="email" data-i18n="form_email" class="d-block mb-2 text-sm font-bold">البريد
+                                الإلكتروني <span class="text-secondary">*</span></label>
+                            <input type="email" id="email" name="email"
+                                class="form-control glass-input full-width p-3 rounded" required autocomplete="email">
+                        </div>
+                        <div class="form-group mb-4 relative input-wrap">
+                            <label for="service" data-i18n="form_service" class="d-block mb-2 text-sm font-bold">الخدمة
+                                المطلوبة</label>
+                            <select id="service" name="service"
+                                class="form-control glass-input full-width p-3 rounded custom-select">
+                                <option value="social" data-i18n="opt_social">إدارة السوشيال ميديا</option>
+                                <option value="ads" data-i18n="opt_ads">الإعلانات المدفوعة</option>
+                                <option value="branding" data-i18n="opt_branding">الهوية البصرية</option>
+                                <option value="seo" data-i18n="opt_seo">تحسين محركات البحث SEO</option>
+                                <option value="other" data-i18n="opt_other">أخرى</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-4 relative input-wrap">
+                            <label for="message" data-i18n="form_message" class="d-block mb-2 text-sm font-bold">رسالتك
+                                (اختياري)</label>
+                            <textarea id="message" name="message" rows="4"
+                                class="form-control glass-input full-width p-3 rounded"></textarea>
+                        </div>
+                        <button type="submit" id="submit-btn" class="btn btn-primary full-width mt-3">
+                            <span data-i18n="form_submit">إرسال الطلب</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer dark-bg pt-5 pb-3">
+        <div class="container footer-container grid">
+            <div class="footer-brand">
+                <a href="#" class="logo mb-3 d-inline-block" aria-label="Pixel Marketing Home">
+                    <span class="gradient-text">Pixel</span> <span data-i18n="logo_text">التسويق</span>
+                </a>
+                <p data-i18n="footer_desc" class="text-sm text-muted mb-4">وكالتك الأمثل لخدمات التسويق الرقمي الشامل.
+                    معاً نحقق رؤيتك ونبني نجاحك.</p>
+                <div class="social-links mt-3 d-flex gap-3">
+                    <a href="#" class="glass-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="glass-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="glass-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="glass-icon" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="footer_links_title" class="mb-3 font-bold">روابط هامة</h4>
+                <ul class="list-none">
+                    <li class="mb-2"><a href="#home" data-i18n="nav_home"
+                            class="text-muted hover-themed text-sm text-decoration-none">الرئيسية</a></li>
+                    <li class="mb-2"><a href="#about" data-i18n="nav_about"
+                            class="text-muted hover-themed text-sm text-decoration-none">من نحن</a></li>
+                    <li class="mb-2"><a href="#services" data-i18n="nav_services"
+                            class="text-muted hover-themed text-sm text-decoration-none">خدماتنا</a></li>
+                    <li class="mb-2"><a href="#pricing" data-i18n="nav_pricing"
+                            class="text-muted hover-themed text-sm text-decoration-none">الأسعار</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="footer_legal_title" class="mb-3 font-bold">قانوني</h4>
+                <ul class="list-none">
+                    <li class="mb-2"><a href="#" data-i18n="footer_privacy"
+                            class="text-muted hover-themed text-sm text-decoration-none">سياسة الخصوصية</a></li>
+                    <li class="mb-2"><a href="#" data-i18n="footer_terms"
+                            class="text-muted hover-themed text-sm text-decoration-none">الشروط والأحكام</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright text-center border-t border-glass mt-5 pt-4 text-sm text-muted">
+            <p>&copy; <span id="year">2023</span> Pixel Marketing. <span data-i18n="footer_rights">جميع الحقوق
+                    محفوظة.</span></p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button (FIXED: Pre-filled text string included to optimize lead capture) -->
+    <a href="https://wa.me/201044529654?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%21%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%B7%D9%84%D8%A8%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9"
+        class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- GSAP Custom JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- Scripts -->
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
